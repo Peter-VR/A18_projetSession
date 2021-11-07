@@ -6,21 +6,21 @@ public class Lot {
 
     //Attributes
     private String desription;
-    private int nb_droits_passage;
-    private int nb_service;
+    private int nbDroitsPassage;
+    private int nbService;
     private int superficie;
-    private String date_mesure;
+    private String dateMesure;
 
     //Constructors
     public Lot() {
     }
 
-    public Lot(String desription, int nb_droits_passage, int nb_service, int superficie, String date_mesure) {
+    public Lot(String desription, int nbDroitsPassage, int nbService, int superficie, String dateMesure) {
         this.desription = desription;
-        this.nb_droits_passage = nb_droits_passage;
-        this.nb_service = nb_service;
+        this.nbDroitsPassage = nbDroitsPassage;
+        this.nbService = nbService;
         this.superficie = superficie;
-        this.date_mesure = date_mesure;
+        this.dateMesure = dateMesure;
     }
 
     //Getter and Setter
@@ -32,20 +32,20 @@ public class Lot {
         this.desription = desription;
     }
 
-    public int getNb_droits_passage() {
-        return nb_droits_passage;
+    public int getNbDroitsPassage() {
+        return nbDroitsPassage;
     }
 
-    public void setNb_droits_passage(int nb_droits_passage) {
-        this.nb_droits_passage = nb_droits_passage;
+    public void setNbDroitsPassage(int nbDroitsPassage) {
+        this.nbDroitsPassage = nbDroitsPassage;
     }
 
-    public int getNb_service() {
-        return nb_service;
+    public int getNbService() {
+        return nbService;
     }
 
-    public void setNb_service(int nb_service) {
-        this.nb_service = nb_service;
+    public void setNbService(int nbService) {
+        this.nbService = nbService;
     }
 
     public int getSuperficie() {
@@ -56,12 +56,12 @@ public class Lot {
         this.superficie = superficie;
     }
 
-    public String getDate_mesure() {
-        return date_mesure;
+    public String getDateMesure() {
+        return dateMesure;
     }
 
-    public void setDate_mesure(String date_mesure) {
-        this.date_mesure = date_mesure;
+    public void setDateMesure(String dateMesure) {
+        this.dateMesure = dateMesure;
     }
 
     @Override
@@ -69,22 +69,22 @@ public class Lot {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Lot lot = (Lot) o;
-        return nb_droits_passage == lot.nb_droits_passage && nb_service == lot.nb_service && superficie == lot.superficie && Objects.equals(desription, lot.desription) && Objects.equals(date_mesure, lot.date_mesure);
+        return nbDroitsPassage == lot.nbDroitsPassage && nbService == lot.nbService && superficie == lot.superficie && Objects.equals(desription, lot.desription) && Objects.equals(dateMesure, lot.dateMesure);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(desription, nb_droits_passage, nb_service, superficie, date_mesure);
+        return Objects.hash(desription, nbDroitsPassage, nbService, superficie, dateMesure);
     }
 
     @Override
     public String toString() {
         return "Lot{" +
                 "desription='" + desription + '\'' +
-                ", nb_droits_passage=" + nb_droits_passage +
-                ", nb_service=" + nb_service +
+                ", nb_droits_passage=" + nbDroitsPassage +
+                ", nb_service=" + nbService +
                 ", superficie=" + superficie +
-                ", date_mesure='" + date_mesure + '\'' +
+                ", date_mesure='" + dateMesure + '\'' +
                 '}';
     }
 }

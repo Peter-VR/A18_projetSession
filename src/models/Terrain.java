@@ -1,51 +1,50 @@
 package models;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Terrain {
 
     //Attributes
-    private int type_terrain;
-    private double prix_m2_min;
-    private double prix_m2_max;
+    private int typeTerrain;
+    private double prixM2Min;
+    private double prixM2Max;
     private ArrayList<Lot> lots;
 
     //Constructors
     public Terrain() {
     }
 
-    public Terrain(int type_terrain, double prix_m2_min, double prix_m2_max, ArrayList<Lot> lots) {
-        this.type_terrain = type_terrain;
-        this.prix_m2_min = prix_m2_min;
-        this.prix_m2_max = prix_m2_max;
+    public Terrain(int typeTerrain, double prixM2Min, double prixM2Max, ArrayList<Lot> lots) {
+        this.typeTerrain = typeTerrain;
+        this.prixM2Min = prixM2Min;
+        this.prixM2Max = prixM2Max;
         this.lots = lots;
     }
 
     //Getter and Setter
-    public int getType_terrain() {
-        return type_terrain;
+    public int getTypeTerrain() {
+        return typeTerrain;
     }
 
-    public void setType_terrain(int type_terrain) {
-        this.type_terrain = type_terrain;
+    public void setTypeTerrain(int typeTerrain) {
+        this.typeTerrain = typeTerrain;
     }
 
-    public double getPrix_m2_min() {
-        return prix_m2_min;
+    public double getPrixM2Min() {
+        return prixM2Min;
     }
 
-    public void setPrix_m2_min(double prix_m2_min) {
-        this.prix_m2_min = prix_m2_min;
+    public void setPrixM2Min(double prixM2Min) {
+        this.prixM2Min = prixM2Min;
     }
 
-    public double getPrix_m2_max() {
-        return prix_m2_max;
+    public double getPrixM2Max() {
+        return prixM2Max;
     }
 
-    public void setPrix_m2_max(double prix_m2_max) {
-        this.prix_m2_max = prix_m2_max;
+    public void setPrixM2Max(double prixM2Max) {
+        this.prixM2Max = prixM2Max;
     }
 
     public ArrayList<Lot> getLots() {
@@ -61,20 +60,20 @@ public class Terrain {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Terrain terrain = (Terrain) o;
-        return type_terrain == terrain.type_terrain && Double.compare(terrain.prix_m2_min, prix_m2_min) == 0 && Double.compare(terrain.prix_m2_max, prix_m2_max) == 0 && Objects.equals(lots, terrain.lots);
+        return typeTerrain == terrain.typeTerrain && Double.compare(terrain.prixM2Min, prixM2Min) == 0 && Double.compare(terrain.prixM2Max, prixM2Max) == 0 && Objects.equals(lots, terrain.lots);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type_terrain, prix_m2_min, prix_m2_max, lots);
+        return Objects.hash(typeTerrain, prixM2Min, prixM2Max, lots);
     }
 
     @Override
     public String toString() {
         return "Terrain{" +
-                "type_terrain=" + type_terrain +
-                ", prix_m2_min=" + prix_m2_min +
-                ", prix_m2_max=" + prix_m2_max +
+                "type_terrain=" + typeTerrain +
+                ", prix_m2_min=" + prixM2Min +
+                ", prix_m2_max=" + prixM2Max +
                 ", lots=" + lots +
                 '}';
     }
